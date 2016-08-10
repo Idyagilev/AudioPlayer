@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5k-bl-VnU">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="Ozo-zW-n7a">
+                                        <connections>
+                                            <action selector="playButton:" destination="BYZ-38-t0r" id="xPM-7c-ndh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="mvz-0r-aa5">
+                                        <connections>
+                                            <action selector="pauseButton:" destination="BYZ-38-t0r" id="7uW-bz-MXz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" id="0vm-tz-sf0">
+                                        <connections>
+                                            <action selector="stopButton:" destination="BYZ-38-t0r" id="V2n-wJ-zsZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="523-fe-wHz">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="ACz-Q6-CHp">
+                                            <rect key="frame" x="114" y="7" width="196" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="sliderVolumeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="i19-HI-Qwg"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LmL-96-ZKA">
+                                <rect key="frame" x="20" y="245" width="280" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                    </view>
+                    <connections>
+                        <outlet property="myProgressView" destination="LmL-96-ZKA" id="9AW-Og-HUi"/>
+                        <outlet property="sliderVolume" destination="ACz-Q6-CHp" id="V60-13-H8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="396"/>
+        </scene>
+    </scenes>
+</document>
